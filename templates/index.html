@@ -5,10 +5,20 @@
     <h3 class="text-center">Currency exchanger <span class="badge bg-info">Flask</span></h3>
     <form action="" method="post">
         <div class="mb-3">
-
+            <label for="from_c" class="form-label">From currency</label>
+            <select name="from" id="from_c" class="form-select">
+                {% for currency in curr %}
+                    <option value="{{ currency.code }}">{{ currency.name }}</option>
+                {% endfor %}
+            </select>
         </div>
         <div class="mb-3">
-
+            <label for="to_c" class="form-label">To currency</label>
+            <select name="to" id="to_c" class="form-select">
+                {% for currency in curr %}
+                    <option value="{{ currency.code }}">{{ currency.name }}</option>
+                {% endfor %}
+            </select>
         </div>
     </form>
 

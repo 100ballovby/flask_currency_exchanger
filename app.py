@@ -11,8 +11,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
-from models import *
 from routes import *
+from models import *
 
 if __name__ == '__main__':  # инструкция запуска сайта
     app.run(debug=True)

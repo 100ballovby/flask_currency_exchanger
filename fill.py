@@ -6,6 +6,7 @@ from models import *
 
 url = 'https://api.coinbase.com/v2/currencies'
 response = requests.get(url)  # подключаюсь к серверу
+print(response.status_code)
 cur = json.loads(response.text)  # выгружаю ответ сервера
 for i in cur['data']:
     c = Currencies()
